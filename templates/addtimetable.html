@@ -1,0 +1,80 @@
+<!DOCKTYPE>
+<html>
+<head>
+<title>Add Time Tanble</title>
+<title>Add Student</title>
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/styledrop.css">
+<style> 
+body
+ {
+  text-align:center;
+  background-image: url("../static/img.png");
+ }
+input[type=text]
+  {
+   width: 130px;
+   box-sizing: border-box;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   background-color: white;
+   background-image: url('searchicon.png');
+   background-position: 5px 5px; 
+   background-repeat: no-repeat;
+   padding: 12px 20px 12px 40px;
+   -webkit-transition: width 0.4s ease-in-out;
+   transition: width 0.4s ease-in-out;
+  }
+input[type=text]:focus 
+  {
+   width: 30%;
+  }
+</style>
+</head>
+<body>
+<form method='POST' action="{{ url_for('addTimetable') }}">
+<div class="w3-container">
+<br><br>
+<h1><u>ADD Time-Table</u></h1>
+<h1>Enter Schedule</h1>
+Sem : 
+<select name="sem">
+    <option value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+    <option value="4">Fourth</option>
+    <option value="5">Fifth</option>
+    <option value="6">Sixth</option>
+</select>
+&nbsp;
+Week Day:
+<select name="dayid">
+    <option value="Sunday">Sunday</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+</select><br><br>
+Lecture 1 : <input type = "text" name= "lecture1" /> <br><br>
+Lecture 2 : <input type = "text" name= "lecture2" /> <br><br>
+Break 1 : &nbsp;<input type = "text" name= "break1" /> <br><br>
+Lecture 3 : <input type = "text" name= "lecture3" /> <br><br>
+Lecture 4 : <input type = "text" name= "lecture4" /> <br><br>
+Break 2 : &nbsp; <input type = "text" name= "break2" /> <br><br>
+Lecture 5 : <input type = "text" name= "lecture5" /> <br><br>
+Lecture 6 : <input type = "text" name= "lecture6" /> <br><br>
+Lecture 7 : <input type = "text" name= "lecture7" /> <br><br>
+<div class="w3-bar">
+  <button type="submit" class="w3-button w3-black" value="submit">Submit</button>
+</div>
+</div>
+
+</form>
+<button class="w3-button w3-teal" onclick="window.location.href='http://127.0.0.1:5000/'" />Log Out</button>
+ &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="w3-button w3-green" onclick="window.location.href='http://127.0.0.1:5000/adminpage'" />Back</button>
+</body>
+</html>

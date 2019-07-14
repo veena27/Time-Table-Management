@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Edit Student</title>
+</head>
+<body>
+<center>
+<form method='POST' action="{{ url_for('editStudent') }}">
+<input type="button" value="Log Out" onclick="window.location.href='http://127.0.0.1:5000/'" />
+<h1>edit Student</h1>
+<h1>enter student details</h1>
+USN:<input type = "text" name= "usn"/> <br>
+Student Name:<input type = "text" name= "studentname" /> <br>
+sem:<select name="sem">
+    <option value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+    <option value="4">Fourth</option>
+    <option value="5">Fifth</option>
+    <option value="6">Sixth</option>
+  </select>
+password:<input type = "text" name= "pwd" /> <br>
+<input type="submit">
+</form>
+Student list to tally:
+<table border="1" cellpadding="5" cellspacing="5">
+    {% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+
+</table>
+</center>
+</body>
+</html>

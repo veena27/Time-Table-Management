@@ -1,0 +1,72 @@
+<!DOCKTYPE>
+<html>
+<head>
+<title>Add Student</title>
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/styledrop.css">
+<style> 
+body
+ {
+  text-align:center;
+  background-image: url("../static/img.png");
+ }
+input[type=text]
+  {
+   width: 130px;
+   box-sizing: border-box;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   background-color: white;
+   background-image: url('searchicon.png');
+   background-position: 5px 5px; 
+   background-repeat: no-repeat;
+   padding: 12px 20px 12px 40px;
+   -webkit-transition: width 0.4s ease-in-out;
+   transition: width 0.4s ease-in-out;
+  }
+input[type=text]:focus 
+  {
+   width: 30%;
+  }
+</style>
+</head>
+<body>
+<form method='POST' action="{{ url_for('addStudent') }}">
+<div class="w3-container">
+<br><br>
+<h1><u>ADD Student</u></h1>
+<h1>Enter student details</h1>
+USN :
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<input type = "text" name= "usn" />
+<br><br>
+Student Name:
+<input type = "text" name= "studentname">
+<br><br/>
+Sem:
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+<select name="sem">
+<option value="1">First</option>
+<option value="2">Second</option>
+<option value="3">Third</option>
+<option value="4">Fourth</option>
+<option value="5">Fifth</option>
+<option value="6">Sixth</option>
+</select>
+<br><br>
+Password:
+&nbsp; &nbsp; &nbsp; &nbsp;
+<input type = "text" name= "pwd" />
+<br><br><br>
+<div class="w3-bar">
+  <button class="w3-button w3-black">Submit</button>
+
+</div>
+</div>
+</form>
+<button class="w3-button w3-teal" onclick="window.location.href='http://127.0.0.1:5000/'" />Log Out</button>
+ &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="w3-button w3-green" onclick="window.location.href='http://127.0.0.1:5000/adminpage'" />Back</button>
+</body>
+</html>

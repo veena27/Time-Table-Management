@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>remove Student</title>
+</head>
+<body>
+<center>
+<form method='POST' action="{{ url_for('removeTimetable') }}">
+<input type="button" value="Log Out" onclick="window.location.href='http://127.0.0.1:5000/'" />
+<h1>Remove Time table</h1>
+<h1>enter time-table</h1>
+sem:<select name="sem">
+    <option value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+    <option value="4">Fourth</option>
+    <option value="5">Fifth</option>
+    <option value="6">Sixth</option>
+  </select><br>
+weekday:<select name="dayid">
+    <option value="0">1</option>
+    <option value="1">2</option>
+    <option value="2">3</option>
+    <option value="3">4</option>
+    <option value="4">5</option>
+    <option value="5">6</option>
+    <option value="6">7</option>
+  </select><br><br>
+<input type="submit" value="remove">
+</form>
+time-table list to tally:
+<table border="1" cellpadding="5" cellspacing="5">
+    {% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>

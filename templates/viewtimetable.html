@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>remove Student</title>
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/styledrop.css">
+<style> 
+body
+ {
+  text-align:center;
+  background-image: url("../static/img.png");
+ }
+</style>
+</head>
+<body>
+<div class="w3-container">
+<button class="w3-button w3-teal" onclick="window.location.href='http://127.0.0.1:5000/'" />Log Out</button>
+ &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="w3-button w3-green" onclick="window.location.href='http://127.0.0.1:5000/adminpage'" />Back</button>
+<h1>Time Table Schedule</h1>
+time-table list:
+<table align="center" border="1" bordercolor="teal" cellpadding="5" cellspacing="0">
+	<tr bgcolor="teal" color="white">
+		<td>Lecture 1 </td>
+		<td>Lecture 2 </td>
+		<td>Break1 </td>
+		<td>Lecture 3 </td>
+		<td>Lecure 4 </td>
+		<td>Break2 </td>
+		<td>Lecture 5 </td>
+		<td>Lecture 6 </td>
+		<td>Lecture 7 </td>
+		<td>Weekday</td>
+		<td>Semester</td>
+	</tr>
+    {% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+<br><br>
+<div class="w3-bar">
+ 
+</div>
+</div>
+</body>
+</html>

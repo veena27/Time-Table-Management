@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>remove Student</title>
+</head>
+<body>
+<center>
+
+<input type="button" value="Log Out" onclick="window.location.href='http://127.0.0.1:5000/'" />
+<h1>Time table</h1>
+
+time-table list:
+<table border="1" cellpadding="5" cellspacing="5">
+    {% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>

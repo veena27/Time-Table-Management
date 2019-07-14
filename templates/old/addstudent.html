@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Add Student</title>
+</head>
+<body>
+<center>
+<form method='POST' action="{{ url_for('addStudent') }}">
+<input type="button" value="Log Out" onclick="window.location.href='http://127.0.0.1:5000/'" />
+<h1>ADD Student</h1>
+<h1>enter student details</h1>
+USN:<input type = "text" name= "usn" /> <br>
+Student Name:<input type = "text" name= "studentname" /> <br>
+sem:<select name="sem">
+    <option value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+    <option value="4">Fourth</option>
+    <option value="5">Fifth</option>
+    <option value="6">Sixth</option>
+  </select>
+password:<input type = "text" name= "pwd" /> <br>
+<input type="submit">
+</form>
+</center>
+</body>
+</html>

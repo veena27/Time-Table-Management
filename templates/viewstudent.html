@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>remove Student</title>
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/styledrop.css">
+<style> 
+body
+ {
+  text-align:center;
+  background-image: url("../static/img.png");
+ }
+</style>
+</head>
+<body>
+<div class="w3-container">
+<h1>Student list</h2>
+<table align="center" border="1" bordercolor="teal" cellpadding="5" cellspacing="0">
+<tr bgcolor="teal" color="white">
+		<td>USN </td>
+		<td>Name</td>
+		<td>Semester</td>
+		<td>Password</td>
+	</tr> 
+    {% for row in data %}
+        <tr>
+        {% for d in row %}
+            <td>{{ d }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+<br><br>
+<div class="w3-bar">
+
+<button class="w3-button w3-teal" onclick="window.location.href='http://127.0.0.1:5000/'" />Log Out</button>
+ &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="w3-button w3-green" onclick="window.location.href='http://127.0.0.1:5000/adminpage'" />Back</button>
+</div>
+</div>
+</body>
+</html>

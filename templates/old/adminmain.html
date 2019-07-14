@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>admin
+</title>
+</head>
+<body>
+<center>
+<h1>admin page</h1>
+<form method="POST" action="{{ url_for('adminMain') }}">
+    <center>
+     <select name="type">
+    <option value="addstudent">Add student</option>
+    <option value="editstudent">Edit student</option>
+    <option value="removestudent">Remove student</option>
+    <option value="viewstudent">viewstudent</option>
+    <option value="addtimetable">Add time table</option>
+    <option value="edittimetable">Edit time table</option>
+    <option value="removetimetable">Remove timetable</option>
+    <option value="viewtimetable">viewtimetable</option>
+  </select>
+    <input type = "submit">
+    </center>
+</form>
+</center>
+</body>
+</html>

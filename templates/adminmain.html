@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Admin Page</title>
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/styledrop.css">
+<style> 
+body
+ {
+  text-align:center;
+  background-image: url("../static/img.png");
+ }
+</style>
+</head>
+<body>
+<br><br>
+<h1><u>Admin Page</u></h1>
+<form method="POST" action="{{ url_for('adminMain') }}">
+<div class="w3-container">
+<select name="type">
+    <option value="addstudent">Add student</option>
+    <option value="editstudent">Edit student</option>
+    <option value="removestudent">Remove student</option>
+    <option value="viewstudent">viewstudent</option>
+    <option value="addtimetable">Add time table</option>
+    <option value="edittimetable">Edit time table</option>
+    <option value="removetimetable">Remove timetable</option>
+    <option value="viewtimetable">viewtimetable</option>
+</select>
+<br><br>
+<div class="w3-bar">
+  <button class="w3-button w3-black">Submit</button>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <button class="w3-button w3-teal" onclick="window.location.href='http://127.0.0.1:5000/'" />Log Out</button>
+</div>
+</div>
+</form>
+</body>
+</html>

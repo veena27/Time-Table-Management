@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Login Page</title>
+<link rel="stylesheet" href="../static/w3.css">
+<link rel="stylesheet" href="../static/styledrop.css">
+<style> 
+body
+ {
+  text-align:center;
+  background-image: url("../static/img.png");
+ }
+input[type=text]
+  {
+   width: 130px;
+   box-sizing: border-box;
+   border: 2px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   background-color: white;
+   background-image: url('searchicon.png');
+   background-position: 5px 5px; 
+   background-repeat: no-repeat;
+   padding: 12px 20px 12px 40px;
+   -webkit-transition: width 0.4s ease-in-out;
+   transition: width 0.4s ease-in-out;
+  }
+input[type=text]:focus 
+  {
+   width: 30%;
+  }
+</style>
+</head>
+<body>
+<form method="POST" action="{{ url_for('main') }}">
+<div class="w3-container">
+<br><br>
+<H1>Enter Your Details For Login</H1><br>
+Name : &nbsp; &nbsp; <input type = "text" name= "name" /> <br><br>
+Password: <input type = "text" name = "pwd" /> <br><br>
+<br><br>
+<div class="w3-bar">
+  <button class="w3-button w3-black">Submit</button>
+  </div>
+</div>
+</form>
+</BODY>
+</HTML>

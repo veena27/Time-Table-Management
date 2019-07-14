@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Add Student</title>
+</head>
+<body>
+<center>
+<form method='POST' action="{{ url_for('addTimetable') }}">
+<input type="button" value="Log Out" onclick="window.location.href='http://127.0.0.1:5000/'" />
+<h1>ADD Time-Table</h1>
+<h1>enter schedule</h1>
+sem:<select name="sem">
+    <option value="1">First</option>
+    <option value="2">Second</option>
+    <option value="3">Third</option>
+    <option value="4">Fourth</option>
+    <option value="5">Fifth</option>
+    <option value="6">Sixth</option>
+  </select><br>
+weekday:<select name="dayid">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+  </select><br>
+lecture 1:<input type = "text" name= "lecture1" /> <br>
+lecture 2:<input type = "text" name= "lecture2" /> <br>
+break 1:<input type = "text" name= "break1" /> <br>
+lecture 3:<input type = "text" name= "lecture3" /> <br>
+lecture 4:<input type = "text" name= "lecture4" /> <br>
+break 2:<input type = "text" name= "break2" /> <br>
+lecture 5:<input type = "text" name= "lecture5" /> <br>
+lecture 6:<input type = "text" name= "lecture6" /> <br>
+lecture 7:<input type = "text" name= "lecture7" /> <br>
+<input type="submit">
+</form>
+</center>
+</body>
+</html>
